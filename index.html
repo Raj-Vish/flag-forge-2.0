@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flag Forge — Breach the Gates</title>
+    <link rel="preload" href="new-logo.png" as="image">
+
+    <!-- Added For SEO -->
+    <meta
+      name="title"
+      content="Flag Forge CTF — Hackathon 2025 | Breach the Gates at RJ College"
+    />
+    <meta
+      name="description"
+      content="Join Flag Forge CTF — a thrilling 5-hour hackathon by RJ College, Mumbai. Showcase your skills in cybersecurity, Capture the Flag challenges, and innovation. Register now!"
+    />
+    <meta
+      name="keywords"
+      content="Flag Forge, CTF, Capture The Flag, Hackathon 2025, RJ College, Mumbai Hackathon, Cybersecurity Event, Ethical Hacking, Student Tech Fest, Coding Competition"
+    />
+    <meta name="author" content="RJ College Tech Fest Team" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+
+    <!-- Add Open Graph Meta Tags (for Instagram, Facebook, LinkedIn) -->
+
+    <meta
+      property="og:title"
+      content="Flag Forge CTF — Breach the Gates 2025"
+    />
+    <meta
+      property="og:description"
+      content="Participate in the ultimate 5-hour Capture The Flag Hackathon by RJ College."
+    />
+    <meta
+      property="og:image"
+      content="https://www.flagforgectf.rjcollege.edu.in/HackInHub-Logo.png"
+    />
+    <meta
+      property="og:url"
+      content="https://www.flagforgectf.rjcollege.edu.in/"
+    />
+    <meta property="og:type" content="website" />
+
+    <link rel="icon" type="image/png" href="HackInHub-Logo.png" />
+    <link rel="canonical" href="https://www.flagforgectf.rjcollege.edu.in/" />
+
+    <link rel="apple-touch-icon" href="HackInHub-Logo.png" />
+
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="logo.css" />
+    <link rel="stylesheet" href="matrix.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="sponsor.css" />
+    <link rel="stylesheet" href="prize.css" />
+    <link rel="stylesheet" href="timeline.css" />
+    <link rel="stylesheet" href="photos.css">
+    <link rel="stylesheet" href="description.css">
+    <!-- Add Font Awesome for social icons -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Added For SEO -->
+
+    <!-- Event Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": "Flag Forge CTF — Breach the Gates 2025",
+        "startDate": "2025-02-20T10:00",
+        "endDate": "2026-02-20T15:00",
+        "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "location": {
+          "@type": "Place",
+          "name": "Ramniranjan Jhunjhunwala College",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Ghatkopar West",
+            "addressLocality": "Mumbai",
+            "postalCode": "400086",
+            "addressRegion": "Maharashtra",
+            "addressCountry": "IN"
+          }
+        },
+        "image": [
+          "https://www.flagforgectf.rjcollege.edu.in/HackInHub-Logo.png"
+        ],
+        "description": "Flag Forge CTF is a 5-hour hackathon organized by RJ College, focused on cybersecurity, Capture the Flag, and innovation.",
+        "organizer": {
+          "@type": "Organization",
+          "name": "RJ College Tech Fest Committee",
+          "url": "https://www.rjcollege.edu.in/"
+        }
+      }
+    </script>
+
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "RJ College Tech Fest",
+        "url": "https://www.rjcollege.edu.in/",
+        "logo": "https://www.flagforgectf.rjcollege.edu.in/HackInHub-Logo.png",
+        "sameAs": ["https://www.instagram.com/", "https://www.linkedin.com/"]
+      }
+    </script>
+
+    <!-- BredCrumb Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.flagforgectf.rjcollege.edu.in/"
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Matrix Background -->
+    <canvas id="bg"></canvas>
+
+    <div class="controls"></div>
+    <div class="ui">
+      <!-- Navbar -->
+      <nav class="header-nav">
+        <div class="branding">
+          <a href="/">
+            <img
+              class="theinevitable"
+              src="new-logo.png"
+              alt="Flag Forge Logo"
+            />
+          </a>
+          <h4 class="brand-name">Flag Forge (CTF) - Breach the Gates</h4>
+        </div>
+
+      
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" id="mobileMenuToggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+
+      <!-- Mobile Menu -->
+      <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-nav-buttons">
+          <a href="#" class="nav-btn2 ghost-btn2" target="_blank">BROCHURE</a>
+          <a href="#" class="nav-btn3 ghost-btn" target="_blank"
+            >REGISTER NOW For Rs 499/-</a
+          >
+        </div>
+      </div>
+
+      <!-- Center Logo Section with H1 below -->
+      <section class="logo-section">
+        <img
+          src="new-logo.png"
+          alt="Flag Forge Logo"
+          class="center-logo"
+        />
+        <h1 class="ctf-title">CAPTURE THE FLAG</h1>
+        <br><br><br>
+
+           <!-- Flag Forge Description Section -->
+        <section class="flag-forge-description">
+          <div class="description-container">
+            <div class="description-grid">
+              <div class="description-card">
+                <div class="card-icon">
+                  <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3 class="card-title">THE ULTIMATE BATTLEGROUND</h3>
+                <p class="card-content">Step into a high-stakes cybersecurity arena where your technical prowess meets real-world challenges. Flag Forge CTF isn't just a competition—it's a proving ground for the next generation of digital defenders.</p>
+              </div>
+
+              <div class="description-card">
+                <div class="card-icon">
+                  <i class="fas fa-lock"></i>
+                </div>
+                <h3 class="card-title">BREACH THE GATES</h3>
+                <p class="card-content">Navigate through complex security systems, decrypt sophisticated codes, and uncover hidden vulnerabilities. Every flag captured brings you closer to cybersecurity mastery and eternal glory.</p>
+              </div>
+
+              <div class="description-card">
+                <div class="card-icon">
+                  <i class="fas fa-rocket"></i>
+                </div>
+                <h3 class="card-title">FORGE YOUR LEGACY</h3>
+                <p class="card-content">Join elite hackers, programmers, and security enthusiasts in an intensive 5-hour marathon of innovation, strategy, and pure technical excellence. This is where skills are tested and legends are made.</p>
+              </div>
+            </div>
+
+            <div class="highlight-section">
+              <h2 class="highlight-title">THE CYBERSECURITY ODYSSEY AWAITS</h2>
+              <p class="highlight-content">
+                Flag Forge CTF transcends traditional hackathons—it's an immersive journey into the heart of digital security. 
+                With cutting-edge challenges, real-world scenarios, and a community of passionate technologists, 
+                you'll push boundaries, break barriers, and emerge transformed.
+              </p>
+            </div>
+
+          
+
+            
+          </div>
+        </section>
+        
+        <h1 class="ctf-title">Coming Soon...</h1>
+
+        <!-- <p class="ctf-description">
+          Flag Forge (CTF) - Breach the Gates is an exhilarating and innovative
+          <span class="highlight">5 Hours Hackathon</span> that aims to bring
+          together bright minds and creative thinkers from various institutions
+          to collaborate, ideate and innovate in the realm of technology and
+          beyond. It is an excellent opportunity for students to showcase their
+          skills, network with peers and gain valuable experience in
+          problem-solving.
+        </p>
+      </section> -->
+
+
+      <!-- <p class="ctf-description">
+        Crack the hidden code in thr brochure to get 25% off on registration
+        fees!! <br />
+        Valid for first 5 participants only.
+      </p> -->
+      <br /><br />
+     
+
+   
+ 
+   
+
+      <!-- ----------------------------Photos Section--------------------------------------------------------------------- -->
+   
+   <!-- Last Year's Hackathon Gallery -->
+      <section class="gallery-section">
+        <h2 class="gallery-main-title">LAST YEAR MEOMERIES</h2>
+
+        <h2 class="gallery-main-title">Champions</h2>
+        
+        <div class="gallery-container">
+          <!-- Row 1 -->
+          <div class="gallery-row">
+            <div class="gallery-item">
+              <div class="gallery-image-container">
+                <img src="/images/1st (1).jpeg" alt="Flag Forge CTF Event" class="gallery-image" loading="lazy">
+              </div>
+            </div>
+            
+            <div class="gallery-item">
+              <div class="gallery-image-container">
+                <img src="/images/2nd.jpeg" alt="Certified Participants" class="gallery-image" loading="lazy">
+              </div>
+            </div>
+            
+            <div class="gallery-item">
+              <div class="gallery-image-container">
+                <img src="/images/3rd.jpeg" alt="Milor HSE's Disaster" class="gallery-image" loading="lazy">
+              </div>
+            </div>
+          </div>
+          
+          <!-- Row 2 -->
+          <h2 class="gallery-main-title">Crucial Hours </h2>
+
+          <div class="gallery-row">
+            <div class="gallery-item">
+              <div class="gallery-image-container">
+                <img src="/images/IMG_0349 (1).jpeg" alt="Hackathon Competition" class="gallery-image" loading="lazy">
+              </div>
+            </div>
+            
+            <div class="gallery-item">
+              <div class="gallery-image-container">
+                <img src="/images/IMG_0364.jpeg" alt="Technical Setup" class="gallery-image" loading="lazy">
+              </div>
+            </div>
+            
+            <div class="gallery-item">
+              <div class="gallery-image-container">
+                <img src="/images/IMG_0366.jpeg" alt="Air Premium Certificate" class="gallery-image" loading="lazy">
+              </div>
+            </div>
+          </div>
+          
+          <!-- Row 3 -->
+          <div class="gallery-row">
+            <div class="gallery-item">
+              <div class="gallery-image-container">
+                <img src="/images/IMG_0373.jpeg" alt="Market Certificate" class="gallery-image" loading="lazy">
+              </div>
+            </div>
+            
+            <div class="gallery-item">
+              <div class="gallery-image-container">
+                <img src="/images/IMG_0382.jpeg" alt="Flag Force CIT" class="gallery-image" loading="lazy">
+              </div>
+            </div>
+            
+            <div class="gallery-item">
+              <div class="gallery-image-container">
+                <img src="/images/IMG_0384-min (1).JPG" alt="Saboo Lab Presentation" class="gallery-image" loading="lazy">
+              </div>
+            </div>
+          </div>
+          
+          <!-- Row 4 -->
+          <h2 class="gallery-main-title">Participants</h2>
+          
+          <!-- Row 5 -->
+          <div class="gallery-row">
+            <div class="gallery-item">
+              <div class="gallery-image-container">
+                <img src="/images/IMG_0463 (2) (1).jpg" alt="Flag Force CTF" class="gallery-image" loading="lazy">
+              </div>
+            </div>
+            
+            <div class="gallery-item">
+              <div class="gallery-image-container">
+                <img src="/images/IMG_0471.jpeg" alt="Saboo Lab Presentation" class="gallery-image" loading="lazy">
+              </div>
+            </div>
+          </div>
+          
+          <h2 class="gallery-main-title">Team Flag Forge</h2>
+
+          <!-- Row 6 -->
+          <div class="gallery-row">
+            <div class="gallery-item">
+              <div class="gallery-image-container">
+                <img src="/images/IMG_0544.jpeg" alt="Hackathon Moment" class="gallery-image" loading="lazy">
+              </div>
+            </div>
+            
+            <div class="gallery-item">
+              <div class="gallery-image-container">
+                <img src="/images/IMG_0563.jpeg" alt="Department IT" class="gallery-image" loading="lazy">
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 7 -->
+          <div class="gallery-row">
+            <div class="gallery-item">
+              <div class="gallery-image-container">
+                <img src="/images/IMG_0571.jpeg" alt="Final Celebration" class="gallery-image" loading="lazy">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+ 
+  
+
+  </div>
+</section>
+      <!-- ------------------------------------------all content inside this div------------------------------------------------------ -->
+    </div>
+    <!-- FOOTER -->
+    <!-- Dark Terminal Footer -->
+    <footer class="footer">
+      <!-- Animated elements -->
+      <div class="matrix-code"></div>
+      <div class="scan-line"></div>
+
+      <div class="footer-container">
+        <!-- Section 1 - Flag Forge -->
+        <div class="footer-section footer-left">
+          <h3 class="footer-title">
+            FLAG FORGE CTF<span class="terminal-cursor"></span>
+          </h3>
+          <p class="footer-description">
+            >_ Breach the digital gates. Capture the flags. Forge your legacy in
+            the world of cybersecurity.
+          </p>
+
+          <!-- Social Links -->
+          <div class="social-links">
+            <a
+              href="https://www.instagram.com/flagforgeofficial/"
+              class="social-link instagram"
+              title="Follow us on Instagram"
+              target="_blank"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/checkpoint/challenge/AgH-x-j0lNH5MwAAAZqbfJcbjEsfHoh5NGGjqVlTfLfjHjukRakibOEx37UEYSLpUH0Xl_lCtmFTbSFiVOr1FtFU3oYQ2Q?ut=3hJreZz7sAvI01"
+              class="social-link linkedin"
+              title="Connect on LinkedIn"
+              target="_blank"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+
+             <a
+              href="https://www.youtube.com/@flagforgectf"
+              class="social-link instagram"
+              title="Follow us on Instagram"
+              target="_blank"
+            >
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Section 2 - Contact -->
+        <div class="footer-section footer-center">
+          <h3 class="footer-title">
+            CONTACT<span class="terminal-cursor"></span>
+          </h3>
+
+          <!-- Contact Info -->
+          <div class="contact-info">
+            <p><i class="fas fa-phone"></i>+91 8356092249 -Pranjal Mishra</p>
+             <p><i class="fas fa-phone"></i>+91 8369645500 -Shubam Padhi</p>
+           
+          </div>
+        </div>
+
+        <!-- Section 3 - College Information -->
+        <div class="footer-section footer-right">
+          <h3 class="footer-title">
+            ORGANIZED BY<span class="terminal-cursor"></span>
+          </h3>
+
+          <div class="college-info">
+            <a
+              href="https://www.rjcollege.edu.in/"
+              target="_blank"
+              class="college-link"
+            >
+              >_ Ramniranjan Jhunjhunwala College
+            </a>
+
+            <a
+              href="https://www.google.com/maps/place/Ramniranjan+Jhunjhunwala+College+of+Arts.+Science+%26+Commerce+(Empowered+Autonomous+Status)/@19.0869625,72.9093963,823m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3be7c62d45927ad1:0x9ee4301782e456bd!8m2!3d19.0869625!4d72.9093963!16s%2Fg%2F11clw41g98?entry=ttu&g_ep=EgoyMDI1MTEwOS4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+              class="address-link"
+            >
+              GHATKOPAR WEST<br />
+              MUMBAI - 400086<br />
+              MAHARASHTRA
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Section -->
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <p>
+            &copy; 2025 FLAG FORGE CTF. ALL RIGHTS RESERVED.<span
+              class="terminal-cursor"
+            ></span>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+
+
+    <script src="navbar.js"></script>
+    <script src="matrix.js"></script>
+    <script src="footer.js"></script>
+    <script src="prize.js"></script>
+    <script src="timeline.js"></script>
+    <!-- Removed photo.js -->
+    <script src="description.js"></script>
+    <script src="performance-boost.js"></script>
+  </body>
+</html>
