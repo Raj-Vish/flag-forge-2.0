@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flag Forge — Breach the Gates</title>
-    <link rel="preload" href="new-logo.png" as="image">
+
+    <!-- Preload main logo (LCP candidate) -->
+    <link rel="preload" href="new-logo.webp" as="image" />
 
     <!-- Added For SEO -->
     <meta
@@ -24,8 +26,7 @@
     <meta name="language" content="English" />
     <meta name="revisit-after" content="7 days" />
 
-    <!-- Add Open Graph Meta Tags (for Instagram, Facebook, LinkedIn) -->
-
+    <!-- Open Graph -->
     <meta
       property="og:title"
       content="Flag Forge CTF — Breach the Gates 2025"
@@ -34,6 +35,7 @@
       property="og:description"
       content="Participate in the ultimate 5-hour Capture The Flag Hackathon by RJ College."
     />
+    <!-- Keep PNG/JPEG here for maximum social compatibility -->
     <meta
       property="og:image"
       content="https://www.flagforgectf.rjcollege.edu.in/HackInHub-Logo.png"
@@ -44,11 +46,12 @@
     />
     <meta property="og:type" content="website" />
 
+    <!-- Favicon / Icons (PNG is safest) -->
     <link rel="icon" type="image/png" href="HackInHub-Logo.png" />
     <link rel="canonical" href="https://www.flagforgectf.rjcollege.edu.in/" />
-
     <link rel="apple-touch-icon" href="HackInHub-Logo.png" />
 
+    <!-- CSS -->
     <link rel="stylesheet" href="navbar.css" />
     <link rel="stylesheet" href="logo.css" />
     <link rel="stylesheet" href="matrix.css" />
@@ -56,15 +59,14 @@
     <link rel="stylesheet" href="sponsor.css" />
     <link rel="stylesheet" href="prize.css" />
     <link rel="stylesheet" href="timeline.css" />
-    <link rel="stylesheet" href="photos.css">
-    <link rel="stylesheet" href="description.css">
-    <!-- Add Font Awesome for social icons -->
+    <link rel="stylesheet" href="photos.css" />
+    <link rel="stylesheet" href="description.css" />
+
+    <!-- Font Awesome -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       rel="stylesheet"
     />
-
-    <!-- Added For SEO -->
 
     <!-- Event Schema -->
     <script type="application/ld+json">
@@ -112,7 +114,7 @@
       }
     </script>
 
-    <!-- BredCrumb Schema -->
+    <!-- Breadcrumb Schema -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -127,6 +129,21 @@
         ]
       }
     </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-KCNKY5WCXP"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-KCNKY5WCXP");
+    </script>
   </head>
   <body>
     <!-- Matrix Background -->
@@ -138,16 +155,23 @@
       <nav class="header-nav">
         <div class="branding">
           <a href="/">
-            <img
-              class="theinevitable"
-              src="new-logo.png"
-              alt="Flag Forge Logo"
-            />
+            <!-- Logo: eager, high priority -->
+            <picture>
+              <source srcset="new-logo.png" type="image/png" />
+              <img
+                class="theinevitable"
+                src="new-logo.png"
+                alt="Flag Forge Logo"
+                width="160"
+                height="160"
+                loading="eager"
+                decoding="async"
+                fetchpriority="high"
+              />
+            </picture>
           </a>
           <h4 class="brand-name">Flag Forge (CTF) - Breach the Gates</h4>
         </div>
-
-      
 
         <!-- Mobile Menu Toggle -->
         <button class="mobile-menu-toggle" id="mobileMenuToggle">
@@ -159,23 +183,32 @@
       <div class="mobile-menu" id="mobileMenu">
         <div class="mobile-nav-buttons">
           <a href="#" class="nav-btn2 ghost-btn2" target="_blank">BROCHURE</a>
-          <a href="#" class="nav-btn3 ghost-btn" target="_blank"
-            >REGISTER NOW For Rs 499/-</a
-          >
+          <a href="#" class="nav-btn3 ghost-btn" target="_blank">
+            REGISTER NOW For Rs 499/-
+          </a>
         </div>
       </div>
 
-      <!-- Center Logo Section with H1 below -->
+      <!-- Center Logo Section -->
       <section class="logo-section">
-        <img
-          src="new-logo.png"
-          alt="Flag Forge Logo"
-          class="center-logo"
-        />
-        <h1 class="ctf-title">CAPTURE THE FLAG</h1>
-        <br><br><br>
+        <picture>
+          <source srcset="new-logo.png" type="image/png" />
+          <img
+            src="new-logo.png"
+            alt="Flag Forge Logo"
+            class="center-logo"
+            width="320"
+            height="320"
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
+          />
+        </picture>
 
-           <!-- Flag Forge Description Section -->
+        <h1 class="ctf-title">CAPTURE THE FLAG</h1>
+        <br /><br /><br />
+
+        <!-- Flag Forge Description Section -->
         <section class="flag-forge-description">
           <div class="description-container">
             <div class="description-grid">
@@ -184,7 +217,12 @@
                   <i class="fas fa-shield-alt"></i>
                 </div>
                 <h3 class="card-title">THE ULTIMATE BATTLEGROUND</h3>
-                <p class="card-content">Step into a high-stakes cybersecurity arena where your technical prowess meets real-world challenges. Flag Forge CTF isn't just a competition—it's a proving ground for the next generation of digital defenders.</p>
+                <p class="card-content">
+                  Step into a high-stakes cybersecurity arena where your
+                  technical prowess meets real-world challenges. Flag Forge CTF
+                  isn't just a competition—it's a proving ground for the next
+                  generation of digital defenders.
+                </p>
               </div>
 
               <div class="description-card">
@@ -192,7 +230,12 @@
                   <i class="fas fa-lock"></i>
                 </div>
                 <h3 class="card-title">BREACH THE GATES</h3>
-                <p class="card-content">Navigate through complex security systems, decrypt sophisticated codes, and uncover hidden vulnerabilities. Every flag captured brings you closer to cybersecurity mastery and eternal glory.</p>
+                <p class="card-content">
+                  Navigate through complex security systems, decrypt
+                  sophisticated codes, and uncover hidden vulnerabilities. Every
+                  flag captured brings you closer to cybersecurity mastery and
+                  eternal glory.
+                </p>
               </div>
 
               <div class="description-card">
@@ -200,187 +243,302 @@
                   <i class="fas fa-rocket"></i>
                 </div>
                 <h3 class="card-title">FORGE YOUR LEGACY</h3>
-                <p class="card-content">Join elite hackers, programmers, and security enthusiasts in an intensive 5-hour marathon of innovation, strategy, and pure technical excellence. This is where skills are tested and legends are made.</p>
+                <p class="card-content">
+                  Join elite hackers, programmers, and security enthusiasts in
+                  an intensive 5-hour marathon of innovation, strategy, and pure
+                  technical excellence. This is where skills are tested and
+                  legends are made.
+                </p>
               </div>
             </div>
 
             <div class="highlight-section">
               <h2 class="highlight-title">THE CYBERSECURITY ODYSSEY AWAITS</h2>
               <p class="highlight-content">
-                Flag Forge CTF transcends traditional hackathons—it's an immersive journey into the heart of digital security. 
-                With cutting-edge challenges, real-world scenarios, and a community of passionate technologists, 
-                you'll push boundaries, break barriers, and emerge transformed.
+                Flag Forge CTF transcends traditional hackathons—it's an
+                immersive journey into the heart of digital security. With
+                cutting-edge challenges, real-world scenarios, and a community
+                of passionate technologists, you'll push boundaries, break
+                barriers, and emerge transformed.
               </p>
             </div>
-
-          
-
-            
           </div>
         </section>
-        
+
         <h1 class="ctf-title">Coming Soon...</h1>
+        <br /><br />
+      </section>
 
-        <!-- <p class="ctf-description">
-          Flag Forge (CTF) - Breach the Gates is an exhilarating and innovative
-          <span class="highlight">5 Hours Hackathon</span> that aims to bring
-          together bright minds and creative thinkers from various institutions
-          to collaborate, ideate and innovate in the realm of technology and
-          beyond. It is an excellent opportunity for students to showcase their
-          skills, network with peers and gain valuable experience in
-          problem-solving.
-        </p>
-      </section> -->
-
-
-      <!-- <p class="ctf-description">
-        Crack the hidden code in thr brochure to get 25% off on registration
-        fees!! <br />
-        Valid for first 5 participants only.
-      </p> -->
-      <br /><br />
-     
-
-   
- 
-   
-
-      <!-- ----------------------------Photos Section--------------------------------------------------------------------- -->
-   
-   <!-- Last Year's Hackathon Gallery -->
+      <!-- Photos / Gallery Section -->
       <section class="gallery-section">
-        <h2 class="gallery-main-title">LAST YEAR MEOMERIES</h2>
+        <h2 class="gallery-main-title">LAST YEAR MEMORIES</h2>
 
         <h2 class="gallery-main-title">Champions</h2>
-        
+
         <div class="gallery-container">
           <!-- Row 1 -->
           <div class="gallery-row">
             <div class="gallery-item">
               <div class="gallery-image-container">
-                <img src="/images/1st (1).jpeg" alt="Flag Forge CTF Event" class="gallery-image" loading="lazy">
+                <picture>
+                  <source srcset="/images/1st (1).webp" type="image/webp" />
+                  <img
+                    src="/images/1st (1).webp"
+                    alt="Flag Forge CTF Event"
+                    class="gallery-image"
+                    loading="lazy"
+                    decoding="async"
+                    width="400"
+                    height="400"
+                  />
+                </picture>
               </div>
             </div>
-            
+
             <div class="gallery-item">
               <div class="gallery-image-container">
-                <img src="/images/2nd.jpeg" alt="Certified Participants" class="gallery-image" loading="lazy">
+                <picture>
+                  <source srcset="/images/2nd.webp" type="image/webp" />
+                  <img
+                    src="/images/2nd.webp"
+                    alt="Certified Participants"
+                    class="gallery-image"
+                    loading="lazy"
+                    decoding="async"
+                    width="400"
+                    height="400"
+                  />
+                </picture>
               </div>
             </div>
-            
+
             <div class="gallery-item">
               <div class="gallery-image-container">
-                <img src="/images/3rd.jpeg" alt="Milor HSE's Disaster" class="gallery-image" loading="lazy">
+                <picture>
+                  <source srcset="/images/3rd.webp" type="image/webp" />
+                  <img
+                    src="/images/3rd.webp"
+                    alt="Milor HSE's Disaster"
+                    class="gallery-image"
+                    loading="lazy"
+                    decoding="async"
+                    width="400"
+                    height="400"
+                  />
+                </picture>
               </div>
             </div>
           </div>
-          
+
           <!-- Row 2 -->
-          <h2 class="gallery-main-title">Crucial Hours </h2>
+          <h2 class="gallery-main-title">Crucial Hours</h2>
 
           <div class="gallery-row">
             <div class="gallery-item">
               <div class="gallery-image-container">
-                <img src="/images/IMG_0349 (1).jpeg" alt="Hackathon Competition" class="gallery-image" loading="lazy">
+                <picture>
+                  <source
+                    srcset="/images/IMG_0349 (1).webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="/images/IMG_0349 (1).webp"
+                    alt="Hackathon Competition"
+                    class="gallery-image"
+                    loading="lazy"
+                    decoding="async"
+                    width="400"
+                    height="400"
+                  />
+                </picture>
               </div>
             </div>
-            
+
             <div class="gallery-item">
               <div class="gallery-image-container">
-                <img src="/images/IMG_0364.jpeg" alt="Technical Setup" class="gallery-image" loading="lazy">
+                <picture>
+                  <source srcset="/images/IMG_0364.webp" type="image/webp" />
+                  <img
+                    src="/images/IMG_0364.webp"
+                    alt="Technical Setup"
+                    class="gallery-image"
+                    loading="lazy"
+                    decoding="async"
+                    width="400"
+                    height="400"
+                  />
+                </picture>
               </div>
             </div>
-            
+
             <div class="gallery-item">
               <div class="gallery-image-container">
-                <img src="/images/IMG_0366.jpeg" alt="Air Premium Certificate" class="gallery-image" loading="lazy">
+                <picture>
+                  <source srcset="/images/IMG_0366.webp" type="image/webp" />
+                  <img
+                    src="/images/IMG_0366.webp"
+                    alt="Air Premium Certificate"
+                    class="gallery-image"
+                    loading="lazy"
+                    decoding="async"
+                    width="400"
+                    height="400"
+                  />
+                </picture>
               </div>
             </div>
           </div>
-          
+
           <!-- Row 3 -->
           <div class="gallery-row">
             <div class="gallery-item">
               <div class="gallery-image-container">
-                <img src="/images/IMG_0373.jpeg" alt="Market Certificate" class="gallery-image" loading="lazy">
+                <picture>
+                  <source srcset="/images/IMG_0373.webp" type="image/webp" />
+                  <img
+                    src="/images/IMG_0373.webp"
+                    alt="Market Certificate"
+                    class="gallery-image"
+                    loading="lazy"
+                    decoding="async"
+                    width="400"
+                    height="400"
+                  />
+                </picture>
               </div>
             </div>
-            
+
             <div class="gallery-item">
               <div class="gallery-image-container">
-                <img src="/images/IMG_0382.jpeg" alt="Flag Force CIT" class="gallery-image" loading="lazy">
+                <picture>
+                  <source srcset="/images/IMG_0382.webp" type="image/webp" />
+                  <img
+                    src="/images/IMG_0382.webp"
+                    alt="Flag Forge CIT"
+                    class="gallery-image"
+                    loading="lazy"
+                    decoding="async"
+                    width="400"
+                    height="400"
+                  />
+                </picture>
               </div>
             </div>
-            
+
             <div class="gallery-item">
               <div class="gallery-image-container">
-                <img src="/images/IMG_0384-min (1).JPG" alt="Saboo Lab Presentation" class="gallery-image" loading="lazy">
+                <picture>
+                  <source
+                    srcset="/images/IMG_0384-min (1).webp"
+                    type="image/webp"
+                  />
+
+                  <img
+                    src="/images/IMG_0384-min (1).webp"
+                    alt="Saboo Lab Presentation"
+                    class="gallery-image"
+                    loading="lazy"
+                    decoding="async"
+                    width="400"
+                    height="400"
+                  />
+                </picture>
               </div>
             </div>
           </div>
-          
+
           <!-- Row 4 -->
           <h2 class="gallery-main-title">Participants</h2>
-          
+
           <!-- Row 5 -->
           <div class="gallery-row">
             <div class="gallery-item">
               <div class="gallery-image-container">
-                <img src="/images/IMG_0463 (2) (1).jpg" alt="Flag Force CTF" class="gallery-image" loading="lazy">
+                <picture>
+                  <source
+                    srcset="/images/IMG_0463 (2) (1).webp"
+                    type="image/webp"
+                  />
+
+                  <img
+                    src="/images/IMG_0463 (2) (1).webp"
+                    alt="Flag Forge CTF"
+                    class="gallery-image"
+                    loading="lazy"
+                    decoding="async"
+                    width="400"
+                    height="400"
+                  />
+                </picture>
               </div>
             </div>
-            
+
             <div class="gallery-item">
               <div class="gallery-image-container">
-                <img src="/images/IMG_0471.jpeg" alt="Saboo Lab Presentation" class="gallery-image" loading="lazy">
+                <picture>
+                  <source srcset="/images/IMG_0471.webp" type="image/webp" />
+                  <img
+                    src="/images/IMG_0471.webp"
+                    alt="Saboo Lab Presentation"
+                    class="gallery-image"
+                    loading="lazy"
+                    decoding="async"
+                    width="400"
+                    height="400"
+                  />
+                </picture>
               </div>
             </div>
           </div>
-          
+
           <h2 class="gallery-main-title">Team Flag Forge</h2>
 
           <!-- Row 6 -->
           <div class="gallery-row">
             <div class="gallery-item">
               <div class="gallery-image-container">
-                <img src="/images/IMG_0544.jpeg" alt="Hackathon Moment" class="gallery-image" loading="lazy">
+                <picture>
+                  <source srcset="/images/IMG_0544.webp" type="image/webp" />
+                  <img
+                    src="/images/IMG_0544.webp"
+                    alt="Hackathon Moment"
+                    class="gallery-image"
+                    loading="lazy"
+                    decoding="async"
+                    width="400"
+                    height="400"
+                  />
+                </picture>
               </div>
             </div>
-            
-            <div class="gallery-item">
-              <div class="gallery-image-container">
-                <img src="/images/IMG_0563.jpeg" alt="Department IT" class="gallery-image" loading="lazy">
-              </div>
-            </div>
-          </div>
 
-          <!-- Row 7 -->
-          <div class="gallery-row">
             <div class="gallery-item">
               <div class="gallery-image-container">
-                <img src="/images/IMG_0571.jpeg" alt="Final Celebration" class="gallery-image" loading="lazy">
+                <picture>
+                  <source srcset="/images/IMG_0563.webp" type="image/webp" />
+                  <img
+                    src="/images/IMG_0563.webp"
+                    alt="Department IT"
+                    class="gallery-image"
+                    loading="lazy"
+                    decoding="async"
+                    width="400"
+                    height="400"
+                  />
+                </picture>
               </div>
             </div>
           </div>
         </div>
       </section>
-  
- 
-  
-
-  </div>
-</section>
-      <!-- ------------------------------------------all content inside this div------------------------------------------------------ -->
     </div>
+
     <!-- FOOTER -->
-    <!-- Dark Terminal Footer -->
     <footer class="footer">
-      <!-- Animated elements -->
       <div class="matrix-code"></div>
       <div class="scan-line"></div>
 
       <div class="footer-container">
-        <!-- Section 1 - Flag Forge -->
         <div class="footer-section footer-left">
           <h3 class="footer-title">
             FLAG FORGE CTF<span class="terminal-cursor"></span>
@@ -390,7 +548,6 @@
             the world of cybersecurity.
           </p>
 
-          <!-- Social Links -->
           <div class="social-links">
             <a
               href="https://www.instagram.com/flagforgeofficial/"
@@ -409,10 +566,10 @@
               <i class="fab fa-linkedin"></i>
             </a>
 
-             <a
+            <a
               href="https://www.youtube.com/@flagforgectf"
               class="social-link instagram"
-              title="Follow us on Instagram"
+              title="Follow us on YouTube"
               target="_blank"
             >
               <i class="fab fa-youtube"></i>
@@ -420,21 +577,17 @@
           </div>
         </div>
 
-        <!-- Section 2 - Contact -->
         <div class="footer-section footer-center">
           <h3 class="footer-title">
             CONTACT<span class="terminal-cursor"></span>
           </h3>
 
-          <!-- Contact Info -->
           <div class="contact-info">
-            <p><i class="fas fa-phone"></i>+91 8356092249 -Pranjal Mishra</p>
-             <p><i class="fas fa-phone"></i>+91 8369645500 -Shubam Padhi</p>
-           
+            <p><i class="fas fa-phone"></i>+91 8356092249 - Pranjal Mishra</p>
+            <p><i class="fas fa-phone"></i>+91 8369645500 - Shubam Padhi</p>
           </div>
         </div>
 
-        <!-- Section 3 - College Information -->
         <div class="footer-section footer-right">
           <h3 class="footer-title">
             ORGANIZED BY<span class="terminal-cursor"></span>
@@ -462,7 +615,6 @@
         </div>
       </div>
 
-      <!-- Bottom Section -->
       <div class="footer-bottom">
         <div class="footer-bottom-content">
           <p>
@@ -474,15 +626,13 @@
       </div>
     </footer>
 
-
-
-    <script src="navbar.js"></script>
-    <script src="matrix.js"></script>
-    <script src="footer.js"></script>
-    <script src="prize.js"></script>
-    <script src="timeline.js"></script>
-    <!-- Removed photo.js -->
-    <script src="description.js"></script>
-    <script src="performance-boost.js"></script>
+    <!-- Scripts: use defer to avoid blocking rendering -->
+    <script src="navbar.js" defer></script>
+    <script src="matrix.js" defer></script>
+    <script src="footer.js" defer></script>
+    <script src="prize.js" defer></script>
+    <script src="timeline.js" defer></script>
+    <script src="description.js" defer></script>
+    <script src="performance-boost.js" defer></script>
   </body>
 </html>
